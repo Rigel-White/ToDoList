@@ -1,9 +1,11 @@
 package com.example.todolist;
 
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -20,5 +22,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.black));
+        getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.black));
     }
 }
